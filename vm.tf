@@ -3,7 +3,7 @@ resource "azurerm_virtual_machine" "tiny" {
   location              = "${azurerm_resource_group.network.location}"
   resource_group_name   = "${azurerm_resource_group.network.name}"
   network_interface_ids = ["${azurerm_network_interface.main.id}"]
-  vm_size               = "B1S"
+  vm_size               = "Standard_B1s"
 
   delete_os_disk_on_termination = true
   delete_data_disks_on_termination = true
